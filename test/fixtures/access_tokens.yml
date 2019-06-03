@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token: one
+  refresh_token: one
+  expires_id: 1
+  revoked_at: 2019-06-03 15:25:30
+
+two:
+  token: two
+  refresh_token: two
+  expires_id: 1
+  revoked_at: 2019-06-03 15:25:30

@@ -1,5 +1,6 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
     def index
-        render json: { status: 200}
+        @AccessToken=AccessToken.first
+        render json: @AccessToken,serializer: AccessTokenSerializer
     end
 end

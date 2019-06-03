@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_033424) do
+ActiveRecord::Schema.define(version: 2019_06_03_072529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "access_tokens", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "token"
+    t.string "refresh_token"
+    t.integer "expires_in"
+    t.datetime "revoked_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["refresh_token"], name: "index_access_tokens_on_refresh_token", unique: true
+    t.index ["token"], name: "index_access_tokens_on_token", unique: true
+    t.index ["user_id"], name: "index_access_tokens_on_user_id"
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -39,6 +52,21 @@ ActiveRecord::Schema.define(version: 2019_06_03_033424) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "phone_number"
+    t.string "password_digest"
+    t.string "openid"
+    t.string "nickname"
+    t.integer "sex"
+    t.string "province"
+    t.string "country"
+    t.string "headimgurl"
+    t.string "unionid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

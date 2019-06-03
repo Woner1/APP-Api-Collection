@@ -31,5 +31,15 @@ module Collection
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.app = config_for(:app).with_indifferent_access
+
+    config.time_zone = 'Beijing'
+    config.active_record.default_timezone = :local
+
+    config.middleware.use Rack::MethodOverride
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+    
   end
 end

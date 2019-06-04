@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
+      #register login
       post 'access_tokens',to: 'access_tokens#create'
+
+      #verification code
+      post 'phone_verifications',to: "phone_verifications#create"
     end
   end
 end

@@ -3,12 +3,12 @@ class AccessToken < ApplicationRecord
   has_secure_token
   has_secure_token :refresh_token
 
-  def exprires_at
-    created_at + exprires_in.seconds
+  def expires_at
+    created_at +  expires_in.seconds
   end
 
   def expired?
-    Time.now.utc > exprires_at
+    Time.now.utc > expires_at
   end
 
 end

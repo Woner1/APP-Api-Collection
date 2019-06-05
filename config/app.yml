@@ -1,0 +1,29 @@
+default: &default
+  db: 
+    username: "postgres"
+    password: "q15991599"
+  aliyun:
+    accesskey_id: "LTAI6gPfCtCcAPbi"
+    access_key_secret: "9XSY9Ks4MjUs7L67DKcatixgtSH4h6"
+    bucket: "anhk"
+    area: "cn-beijing"
+    host: "http://anhk.oss-cn-beijing.aliyuncs.com"
+  sms:
+    apikey: "79ed15a707595520487ec6ecf6e226b1"
+  api:
+    error:
+      save_error: "信息生成失败"
+      update_error: "信息更新失败"
+      destroy_error: "信息删除失败"
+  weather:
+    appkey: "1846e1893c9b43f81292293a2f02a985"
+development:
+  <<: *default
+test:
+  <<: *default
+production:
+  <<: *default
+
+
+
+

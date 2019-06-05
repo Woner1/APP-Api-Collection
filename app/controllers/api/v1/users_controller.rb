@@ -9,7 +9,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     phone = Phonelib.parse(user_params[:phone_number])
     raise VerificationFailed unless PhoneVerification.check(phone.e164, user_params[:verification_code])
     user = User.create!(username: Faker::Name.unique.name, phone_number: phone.e164, password: Faker::Internet.password(8))
-    render json: user, status: 200
+    render_ok user
   end
 
   private

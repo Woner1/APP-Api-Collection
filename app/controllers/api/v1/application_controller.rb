@@ -1,8 +1,8 @@
 class Api::V1::ApplicationController < ActionController::API
 
-  # include JsonRender
-  # include ExceptionHandler
+  include JsonRender
   before_action :authenticate_user!
+
 
   def authenticate_user!
     token, options = ActionController::HttpAuthentication::Token.token_and_options(request)

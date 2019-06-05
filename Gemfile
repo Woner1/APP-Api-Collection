@@ -33,6 +33,7 @@ gem 'activeadmin', '~> 2.0'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'phonelib', '~> 0.6.34'
 gem 'faker', '~> 1.9', '>= 1.9.3'
+# gem 'aliyunsdkcore', '~> 0.0.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

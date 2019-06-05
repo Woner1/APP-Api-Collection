@@ -8,6 +8,8 @@ default: &default
     bucket: "anhk"
     area: "cn-beijing"
     host: "http://anhk.oss-cn-beijing.aliyuncs.com"
+  sms:
+    apikey: "79ed15a707595520487ec6ecf6e226b1"
   api:
     error:
       save_error: "信息生成失败"
@@ -21,3 +23,7 @@ test:
   <<: *default
 production:
   <<: *default
+
+
+
+

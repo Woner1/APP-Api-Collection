@@ -1,7 +1,7 @@
 class Api::V1::ApplicationController < ActionController::API
 
-  include JsonRender
-  include ExceptionHandler
+  # include JsonRender
+  # include ExceptionHandler
   before_action :authenticate_user!
 
   def authenticate_user!

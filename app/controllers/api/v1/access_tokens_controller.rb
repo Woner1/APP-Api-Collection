@@ -1,5 +1,6 @@
 class Api::V1::AccessTokensController < Api::V1::ApplicationController
-    
+    skip_before_action :authenticate_user!
+
     def create
         return wechat_login if params[:wechat].present?
         return refresh_token if params[:refresh_token].present?

@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 gem 'activeadmin', '~> 2.0'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'phonelib', '~> 0.6.34'
 gem 'faker', '~> 1.9', '>= 1.9.3'
 # gem 'aliyunsdkcore', '~> 0.0.9'

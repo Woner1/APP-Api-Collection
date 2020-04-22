@@ -1,7 +1,7 @@
 default: &default
   db: 
-    username: "postgres"
-    password: "q15991599"
+    username: "ankh"
+    password: ""
   aliyun:
     accesskey_id: "LTAI6gPfCtCcAPbi"
     access_key_secret: "9XSY9Ks4MjUs7L67DKcatixgtSH4h6"
